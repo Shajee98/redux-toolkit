@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "../counter/counter_slice";
+import PostSlice from "../counter/post_slice"
 
 export const store = configureStore({
     reducer: {
-        counter: counterReducer
+        posts: PostSlice
     }
-}) 
+})
 
 export type AppDispatch = typeof store.dispatch
 export type RootState = ReturnType<typeof store.getState>
